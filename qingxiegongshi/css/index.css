@@ -1,0 +1,124 @@
+
+*{
+    text-decoration: darkseagreen;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(221, 236, 195);
+}
+.container{
+    padding: 0;
+    width:100%;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+.top{
+    background-color:white;
+    margin: 0;
+    padding: 1.5em 1em 0em 1em;
+    height:4.5em;
+}
+a :hover{
+    text-decoration: none;
+}
+
+/* .container > .tab-content{
+    border-left:1px solid #ddd;
+    border-right:1px solid #ddd;
+} */
+/* 头部导航*/
+.top-left,.top-middle,.top-right{
+    display: inline-block;
+}
+.top-left{
+    width:15%;
+    margin:0 auto;
+}
+.top-middle{
+    width:60%;
+    margin:0 auto;
+    font-size: 1.6em;
+}
+.top-middle > div{
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+.top-right{
+    position: relative;
+    right: 0;
+    width:22%;
+    margin:0 auto;
+    font-size:0.6em;
+}
+/*轮播图*/
+.slider{
+    margin-top:4.5em;
+}
+/*中部导航*/
+.nav-tabs{
+    
+    width: 100%;
+}
+.nav-tabs > .active{
+    background-color: aliceblue;
+    border-bottom: none;
+}
+.nav-tabs > li{
+    width:33.333%;
+    background-color: rgb(221, 236, 195);
+}
+.nav-tabs > li :hover{
+    background-color: lightcyan;
+}
+.active{
+    background-color: white;
+}
+.tab-content{
+    width: 100%;
+    z-index: -1;
+}
+.tab-pane ul{
+    list-style: none;
+    padding: 0;
+}
+.tab-pane li{
+    width:100%;
+    height:3em;
+    padding: 1em 1em;
+    border-bottom: 0.05em solid rgb(146, 214, 29);
+    box-shadow: 0.1em 0.1em rgb(221, 236, 195);
+    margin-top:1%;
+}
+/*底部导航*/
+.foot{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    bottom: 0;
+    padding: 0;
+    height: 10%;
+}
+.foot-left,.foot-right{
+    display: inline-block;
+    box-sizing: content-box;
+    width:49.4%;
+    height:80%;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 0.5em;
+}
+.foot-left img{
+    background-size: cover;
+    width:2.6em;
+    max-width: 100%;
+}
+.foot-right img{
+    background-size: cover;
+    width:2.6em;
+    max-width: 100%;
+}
