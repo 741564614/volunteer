@@ -1,10 +1,6 @@
 package dao;
 
 import java.sql.*;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 
 public class dbconn {
@@ -16,15 +12,16 @@ public class dbconn {
 	//方法一 连接数据库
 	public void getConnection() {
 		try{
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 		}catch(ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		try{
-			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/volunteersystem?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false\",\"root\",\"root");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/volunteersystem?useSSL=false&serverTimezone=UTC","root","root");
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}
+		
 	}
 	//方法二 关闭数据库
 	public void closeConnetion() {

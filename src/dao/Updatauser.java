@@ -12,4 +12,8 @@ public class Updatauser {
 		String sql="update user set password=? where account=?";
 		db.update(sql, password,account);
 	}
+	public void result(String account,int hours) {
+		String sql="update user set hours=? where account=?";
+		db.update(sql, hours,account);
+	}
 }

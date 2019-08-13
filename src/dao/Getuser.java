@@ -13,15 +13,17 @@ public class Getuser {
 		dbconn db=new dbconn();
 		res=db.select(sql,account);
 		try {
-			user.setaccount(res.getString("account"));
-			user.setpassword(res.getString("password"));
-			user.setname(res.getString("name"));
-			user.settel(res.getString("tel"));
-			user.setQQ(res.getString("QQ"));
-			user.setemail(res.getString("email"));
-			user.setmajor(res.getString("major"));
-			user.setidentity(res.getString("identity"));
-			user.sethours(res.getInt("hours"));
+			if(res.next()) {
+				user.setaccount(res.getString("account"));
+				user.setpassword(res.getString("password"));
+				user.setname(res.getString("name"));
+				user.settel(res.getString("tel"));
+				user.setQQ(res.getString("QQ"));
+				user.setemail(res.getString("email"));
+				user.setmajor(res.getString("major"));
+				user.setidentity(res.getString("identity"));
+				user.sethours(res.getInt("hours"));
+			}
 		} catch (SQLException e) {
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
